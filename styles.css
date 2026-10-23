@@ -1189,11 +1189,21 @@ h2 em {
 }
 
 .hours {
+  position: relative;
   display: grid;
   grid-template-columns: 0.8fr 1.2fr;
   align-items: center;
   gap: clamp(2.5rem, 7vw, 7rem);
-  background: var(--paper);
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 10% 12%, rgba(255, 255, 255, 0.62), transparent 28%),
+    linear-gradient(125deg, #f7e2e0 0%, #faeeeb 52%, #f5dfdd 100%);
+}
+
+.hours__intro {
+  position: relative;
+  z-index: 1;
+  padding: 1rem 0;
 }
 
 .hours__intro h2 {
@@ -1218,40 +1228,122 @@ h2 em {
   line-height: 1.9;
 }
 
+.hours__note {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 1.7rem;
+  border: 1px solid rgba(189, 104, 119, 0.24);
+  border-radius: 999px;
+  padding: 0.7rem 1.1rem 0.7rem 0.7rem;
+  background: rgba(255, 250, 247, 0.68);
+  color: var(--muted);
+  font-size: 0.68rem;
+  line-height: 1.6;
+}
+
+.hours__note strong {
+  color: var(--rose-dark);
+  font-weight: 600;
+}
+
+.hours__note-icon {
+  display: grid;
+  width: 2.5rem;
+  height: 2.5rem;
+  place-items: center;
+  border-radius: 50%;
+  background: #f4d8d8;
+  color: var(--rose-dark);
+  font-size: 1.15rem;
+}
+
+.hours__ornament {
+  position: absolute;
+  z-index: -1;
+  right: 1.5rem;
+  bottom: -7rem;
+  color: rgba(189, 104, 119, 0.11);
+  font-size: 16rem;
+  line-height: 1;
+  pointer-events: none;
+}
+
 .hours-card {
-  border: 1px solid rgba(210, 176, 169, 0.65);
-  padding: clamp(1.5rem, 3vw, 2.5rem);
-  background: linear-gradient(145deg, #fffaf7, #fdf2ef);
-  box-shadow: 0 1rem 3rem rgba(97, 54, 52, 0.07);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.82);
+  border-radius: 0.35rem;
+  background: #fffaf7;
+  box-shadow: 0 1.35rem 3.5rem rgba(112, 59, 64, 0.14);
 }
 
 .hours-card__heading {
-  padding-bottom: 1.3rem;
+  position: relative;
+  overflow: hidden;
+  padding: 1.6rem 1.5rem 1.45rem;
+  background:
+    radial-gradient(ellipse at 85% 0%, rgba(250, 193, 203, 0.2), transparent 42%),
+    linear-gradient(120deg, #713f4c, #a65368);
+  color: #fff8f7;
   text-align: center;
 }
 
+.hours-card__heading::after {
+  position: absolute;
+  right: -2rem;
+  bottom: -5rem;
+  color: rgba(255, 231, 235, 0.1);
+  content: "✳";
+  font-size: 11rem;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.hours-card__eyebrow {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 0.4rem !important;
+  color: #f5c9d0 !important;
+  font-size: 0.55rem !important;
+  font-weight: 600;
+  letter-spacing: 0.2em !important;
+}
+
+.hours-card__heading h2,
+.hours-card__heading > p:last-child,
 .hours-card__spark {
-  color: var(--rose);
-  font-size: 1.4rem;
+  position: relative;
+  z-index: 1;
+}
+
+.hours-card__heading {
+  padding-bottom: 1.5rem;
 }
 
 .hours-card__heading h2 {
-  margin: 0.35rem 0 0.25rem;
+  margin: 0.35rem 0;
   font-family: var(--serif);
-  font-size: 1.85rem;
+  font-size: 2rem;
   font-weight: 400;
 }
 
-.hours-card__heading p {
+.hours-card__heading > p:last-child {
   margin: 0;
-  color: var(--muted);
-  font-size: 0.65rem;
-  letter-spacing: 0.07em;
+  color: rgba(255, 248, 247, 0.8);
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
 }
 
-.hours-list {
-  margin: 0;
-  border-top: 1px solid var(--line);
+.hours-card__spark {
+  display: inline-block;
+  color: #f4c4ce;
+  font-size: 1.25rem;
+}
+
+.hours-card > .hours-list {
+  margin: 0 clamp(1rem, 3vw, 2.15rem);
+  border-top: 0;
 }
 
 .hours-list__row {
@@ -1259,32 +1351,72 @@ h2 em {
   grid-template-columns: minmax(6rem, 0.7fr) minmax(0, 1.3fr);
   align-items: center;
   gap: 0.75rem;
-  border-bottom: 1px solid var(--line);
-  padding: 0.85rem 0.2rem;
+  border-bottom: 1px solid #f1e4e0;
+  padding: 0.65rem 0.55rem;
+  transition: background 160ms ease;
+}
+
+.hours-list__row:hover {
+  background: #fff5f2;
 }
 
 .hours-list__row dt {
-  color: #473a39;
-  font-family: var(--serif);
-  font-size: 0.98rem;
+  display: inline-flex;
+  width: fit-content;
+  min-width: 5.2rem;
+  justify-content: center;
+  border: 1px solid #edd4d3;
+  border-radius: 99px;
+  padding: 0.34rem 0.7rem;
+  background: #fbefed;
+  color: #60474a;
+  font-family: var(--sans);
+  font-size: 0.64rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
 }
 
 .hours-list__row dd {
-  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.45rem;
   color: var(--rose-dark);
-  font-size: 0.75rem;
-  font-weight: 500;
+  font-size: 0.72rem;
+  font-weight: 600;
   text-align: right;
 }
 
+.hours-list__row:not(.hours-list__row--closed) dd::before {
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background: #78a687;
+  box-shadow: 0 0 0 3px rgba(120, 166, 135, 0.13);
+  content: "";
+}
+
+.hours-list__row--closed dt {
+  border-color: #eee5e2;
+  background: #f6f1ee;
+  color: #807271;
+}
+
 .hours-list__row--closed dd {
-  color: var(--muted);
+  border-radius: 99px;
+  padding: 0.28rem 0.65rem;
+  background: #f6f1ee;
+  color: #807271;
+  font-size: 0.63rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .hours-card__note {
-  margin: 1rem 0 0;
+  margin: 0;
+  padding: 1rem;
   color: var(--muted);
-  font-size: 0.64rem;
+  font-size: 0.62rem;
   text-align: center;
 }
 
@@ -1560,6 +1692,16 @@ h2 em {
 
   .hours-card {
     width: 100%;
+  }
+
+  .hours__intro {
+    padding-top: 0;
+  }
+
+  .hours__ornament {
+    right: 0;
+    bottom: -5rem;
+    font-size: 12rem;
   }
 
   .intro {
