@@ -2,7 +2,7 @@
 
 A responsive static website preview for Glowrify in Surrey, BC, Canada.
 
-The site includes separate `pricing.html`, `hours.html`, and `post-op.html` pages for whitening prices, studio hours, and post-whitening instructions.
+The site includes separate `pricing.html`, `hours.html`, `preparation.html`, and `post-op.html` pages for whitening prices, studio hours, pre-appointment guidance, and post-whitening instructions.
 
 ## Preview locally
 
