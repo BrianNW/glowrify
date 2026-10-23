@@ -2,6 +2,8 @@
 
 A responsive static website preview for Glowrify in Surrey, BC, Canada.
 
+The site includes a separate `pricing.html` page with whitening session and touch-up pricing.
+
 ## Preview locally
 
 Open `index.html` in a browser. The fonts are loaded from Google Fonts; all site images are stored in `images/`.
