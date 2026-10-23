@@ -6,9 +6,11 @@ The site includes separate `pricing.html`, `hours.html`, `preparation.html`, and
 
 Each page has location-focused search metadata and social sharing previews. `sitemap.xml` lists the public pages, and `robots.txt` points crawlers to the sitemap.
 
+The home page's booking buttons open `bookings.html`, a static visual calendar preview. Its sample times are for design testing only; they do not reflect live availability, reserve appointments, or transmit form details.
+
 ## Preview locally
 
-Open `index.html` in a browser. The fonts are loaded from Google Fonts; all site images are stored in `images/`.
+Open `index.html` or `bookings.html` in a browser. The fonts are loaded from Google Fonts; all site images are stored in `images/`.
 
 ## Deploy with GitHub Pages
 

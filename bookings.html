@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#fbf5f2" />
+    <title>Booking Calendar Preview | Glowrify</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header site-header--interior">
+      <a class="wordmark" href="index.html#home" aria-label="Glowrify Teeth Whitening home">
+        <span class="wordmark__name">Glowrify<span class="wordmark__dot">.</span></span>
+        <span class="wordmark__descriptor">TEETH WHITENING</span>
+      </a>
+      <a class="button button--small header-cta" href="index.html">
+        <span>Back to home</span>
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11m-4-4 4 4-4 4" /></svg>
+      </a>
+    </header>
+
+    <main>
+      <section class="pricing-hero booking-preview-hero">
+        <p class="eyebrow"><span class="eyebrow__line"></span> Surrey, British Columbia</p>
+        <h1>Find a time<br /><em>for your glow.</em></h1>
+        <p>Explore the appointment calendar and choose a sample time for this design preview.</p>
+        <span class="pricing-hero__spark" aria-hidden="true">✳</span>
+      </section>
+
+      <section class="booking-preview section-pad" aria-labelledby="booking-title">
+        <div class="booking-preview__panel">
+          <div class="booking-preview__heading">
+            <p class="eyebrow"><span class="eyebrow__line"></span> A little more glow</p>
+            <h2 id="booking-title">Request an appointment</h2>
+            <p>Choose a session, a date, and a sample start time.</p>
+          </div>
+
+          <div class="booking-preview__notice" role="note">
+            <span aria-hidden="true">✳</span>
+            <p><strong>Design preview only.</strong> The calendar shows sample times and does not check live bookings or reserve appointments.</p>
+          </div>
+
+          <form class="booking-preview__form" id="booking-preview-form">
+            <label class="booking-preview__field" for="preview-service">
+              Whitening session
+              <select id="preview-service" name="service" required>
+                <option value="">Choose a session</option>
+                <option value="40">40-minute whitening · 1 hr 15 min visit · $110</option>
+                <option value="60">60-minute whitening · 1 hr 30 min visit · $130</option>
+                <option value="80">80-minute whitening · 1 hr 45 min visit · $150</option>
+              </select>
+            </label>
+
+            <div class="booking-preview__calendar">
+              <div class="booking-preview__calendar-top">
+                <div>
+                  <span class="booking-preview__overline">YOUR VISIT</span>
+                  <h3>Select a date</h3>
+                </div>
+                <div class="booking-preview__month-actions">
+                  <button class="booking-preview__month-button" id="previous-month" type="button" aria-label="Previous month">‹</button>
+                  <button class="booking-preview__month-button" id="next-month" type="button" aria-label="Next month">›</button>
+                </div>
+              </div>
+              <p class="booking-preview__month" id="calendar-month" aria-live="polite"></p>
+              <p class="booking-preview__calendar-hint" id="calendar-hint" aria-live="polite">Choose a whitening session to see sample dates.</p>
+              <div class="booking-preview__grid" id="calendar-grid" role="grid" aria-label="Appointment calendar"></div>
+              <div class="booking-preview__legend">
+                <span class="booking-preview__legend-dot" aria-hidden="true"></span>
+                <span>Sample times</span>
+                <span class="booking-preview__timezone">Pacific Time</span>
+              </div>
+            </div>
+
+            <fieldset class="booking-preview__times">
+              <legend>Available start times</legend>
+              <p class="booking-preview__times-hint" id="times-hint" aria-live="polite">Choose a session and date to see sample times.</p>
+              <div class="booking-preview__time-list" id="time-list" role="group" aria-label="Sample start times"></div>
+            </fieldset>
+
+            <div class="booking-preview__contact">
+              <label class="booking-preview__field" for="preview-name">Your name
+                <input id="preview-name" name="name" type="text" autocomplete="name" placeholder="Name" required />
+              </label>
+              <label class="booking-preview__field" for="preview-email">Email address
+                <input id="preview-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required />
+              </label>
+              <label class="booking-preview__field" for="preview-phone">Phone number
+                <input id="preview-phone" name="phone" type="tel" autocomplete="tel" placeholder="(604) 555-0123" required />
+              </label>
+            </div>
+
+            <button class="button booking-preview__submit" type="submit">
+              <span>Preview booking request</span>
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11m-4-4 4 4-4 4" /></svg>
+            </button>
+            <p class="booking-preview__result" id="booking-result" role="status" aria-live="polite"></p>
+            <p class="booking-preview__privacy">This is a visual demo. Your details are not sent or saved.</p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <span class="footer-nav__label">A little more Glowrify</span>
+      <div class="footer-nav__links">
+        <a href="index.html#about">About</a>
+        <a href="index.html#services">Whitening</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="hours.html">Hours</a>
+        <a href="preparation.html">Preparation</a>
+        <a href="post-op.html">Aftercare</a>
+        <a href="index.html#faq">FAQs</a>
+      </div>
+    </nav>
+
+    <footer class="site-footer">
+      <a class="wordmark wordmark--footer" href="index.html#home" aria-label="Glowrify Teeth Whitening home">
+        <span class="wordmark__name">Glowrify<span class="wordmark__dot">.</span></span>
+        <span class="wordmark__descriptor">TEETH WHITENING</span>
+      </a>
+      <p>Whitening, made personal. <span aria-hidden="true">♡</span></p>
+      <span class="site-footer__copyright">© 2026 GLOWRIFY TEETH WHITENING</span>
+    </footer>
+    <script src="bookings.js"></script>
+  </body>
+</html>
