@@ -1005,6 +1005,57 @@ h2 em {
   letter-spacing: 0.13em;
 }
 
+.footer-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.15rem var(--page-gutter);
+  border-top: 1px solid rgba(189, 104, 119, 0.16);
+  background:
+    radial-gradient(ellipse at 10% 0%, rgba(255, 255, 255, 0.72), transparent 38%),
+    #f8e9e6;
+}
+
+.footer-nav__label {
+  color: var(--muted);
+  font-family: var(--serif);
+  font-size: 0.88rem;
+  font-style: italic;
+}
+
+.footer-nav__links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: clamp(1.2rem, 3vw, 2.8rem);
+}
+
+.footer-nav__links a {
+  position: relative;
+  color: #654f4e;
+  font-size: 0.61rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  transition: color 180ms ease;
+}
+
+.footer-nav__links a:hover,
+.footer-nav__links a[aria-current="page"] {
+  color: var(--rose-dark);
+}
+
+.footer-nav__links a[aria-current="page"]::after {
+  position: absolute;
+  right: 0;
+  bottom: -0.35rem;
+  left: 0;
+  height: 1px;
+  background: var(--rose);
+  content: "";
+}
+
 .pricing-hero {
   position: relative;
   overflow: hidden;
@@ -1811,6 +1862,24 @@ h2 em {
     gap: 0.8rem 1.2rem;
     padding-top: 1.2rem;
     padding-bottom: 1.2rem;
+  }
+
+  .footer-nav {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding-top: 1.1rem;
+    padding-bottom: 1.1rem;
+  }
+
+  .footer-nav__links {
+    width: 100%;
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+
+  .footer-nav__links a {
+    font-size: 0.56rem;
   }
 
   .site-footer > p {
