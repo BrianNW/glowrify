@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://briannw.github.io/glowrify/sitemap.xml
