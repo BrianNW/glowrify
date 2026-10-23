@@ -1471,6 +1471,272 @@ h2 em {
   text-align: center;
 }
 
+.aftercare-hero h1 {
+  max-width: 45rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.aftercare {
+  position: relative;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  align-items: start;
+  gap: clamp(2.5rem, 7vw, 7rem);
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 10% 12%, rgba(255, 255, 255, 0.64), transparent 28%),
+    linear-gradient(125deg, #f7e2e0 0%, #faeeeb 52%, #f5dfdd 100%);
+}
+
+.aftercare__intro {
+  position: sticky;
+  top: 2rem;
+}
+
+.aftercare__intro h2 {
+  margin: 1rem 0;
+  font-family: var(--serif);
+  font-size: clamp(2.7rem, 4.3vw, 4rem);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  line-height: 1.13;
+}
+
+.aftercare__intro h2 em {
+  color: var(--rose);
+  font-weight: 400;
+}
+
+.aftercare__intro > p:not(.eyebrow) {
+  max-width: 23rem;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.9;
+}
+
+.aftercare__note {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 1.7rem;
+  border: 1px solid rgba(189, 104, 119, 0.24);
+  border-radius: 999px;
+  padding: 0.7rem 1.1rem 0.7rem 0.7rem;
+  background: rgba(255, 250, 247, 0.75);
+  color: var(--muted);
+  font-size: 0.68rem;
+  line-height: 1.6;
+}
+
+.aftercare__note strong {
+  color: var(--rose-dark);
+  font-weight: 600;
+}
+
+.aftercare__note-icon {
+  display: grid;
+  width: 2.5rem;
+  height: 2.5rem;
+  place-items: center;
+  border-radius: 50%;
+  background: #f4d8d8;
+  color: var(--rose-dark);
+  font-size: 1.15rem;
+}
+
+.aftercare__ornament {
+  display: block;
+  margin-top: 2.2rem;
+  color: rgba(189, 104, 119, 0.32);
+  font-size: 2rem;
+}
+
+.aftercare-guide {
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.82);
+  border-radius: 0.35rem;
+  background: #fffaf7;
+  box-shadow: 0 1.35rem 3.5rem rgba(112, 59, 64, 0.14);
+}
+
+.aftercare-guide__heading {
+  position: relative;
+  overflow: hidden;
+  padding: 1.65rem 1.5rem 1.5rem;
+  background:
+    radial-gradient(ellipse at 85% 0%, rgba(250, 193, 203, 0.2), transparent 42%),
+    linear-gradient(120deg, #713f4c, #a65368);
+  color: #fff8f7;
+  text-align: center;
+}
+
+.aftercare-guide__heading::after {
+  position: absolute;
+  right: -1.5rem;
+  bottom: -5.2rem;
+  color: rgba(255, 231, 235, 0.1);
+  content: "✳";
+  font-size: 11rem;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.aftercare-guide__spark,
+.aftercare-guide__eyebrow,
+.aftercare-guide__heading h2,
+.aftercare-guide__heading > p:last-child {
+  position: relative;
+  z-index: 1;
+}
+
+.aftercare-guide__spark {
+  display: inline-block;
+  color: #f4c4ce;
+  font-size: 1.25rem;
+}
+
+.aftercare-guide__eyebrow {
+  margin: 0.25rem 0 0.4rem;
+  color: #f5c9d0;
+  font-size: 0.55rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+}
+
+.aftercare-guide__heading h2 {
+  margin: 0.2rem 0;
+  font-family: var(--serif);
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.aftercare-guide__heading > p:last-child {
+  margin: 0;
+  color: rgba(255, 248, 247, 0.8);
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+}
+
+.aftercare-step {
+  position: relative;
+  display: grid;
+  grid-template-columns: 2.8rem 2.8rem minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 0.8rem;
+  margin: 0 1.4rem;
+  border-bottom: 1px solid #f1e4e0;
+  padding: 1.25rem 0.3rem;
+}
+
+.aftercare-step--featured {
+  margin: 1rem 1.4rem 0;
+  border: 1px solid #ecd2d1;
+  border-radius: 0.25rem;
+  padding: 1.1rem 0.8rem;
+  background: linear-gradient(115deg, #fff6f3, #fbe9e7);
+}
+
+.aftercare-step__number {
+  padding-top: 0.58rem;
+  color: #b59c96;
+  font-family: var(--serif);
+  font-size: 0.78rem;
+  font-style: italic;
+}
+
+.aftercare-step__icon {
+  display: grid;
+  width: 2.55rem;
+  height: 2.55rem;
+  place-items: center;
+  border-radius: 50%;
+  background: #f8e5e2;
+  color: var(--rose-dark);
+}
+
+.aftercare-step__icon svg {
+  width: 1.3rem;
+  height: 1.3rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.5;
+}
+
+.aftercare-step__content h3 {
+  margin: 0.15rem 0 0.35rem;
+  color: #403333;
+  font-family: var(--serif);
+  font-size: 1.12rem;
+  font-weight: 400;
+}
+
+.aftercare-step__content > p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.7rem;
+  line-height: 1.8;
+}
+
+.aftercare-step__badge {
+  align-self: center;
+  border: 1px solid #ecced0;
+  border-radius: 99px;
+  padding: 0.37rem 0.6rem;
+  background: #fffaf7;
+  color: var(--rose-dark);
+  font-size: 0.5rem;
+  font-weight: 600;
+  letter-spacing: 0.11em;
+  white-space: nowrap;
+}
+
+.staining-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0.75rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.staining-list li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  border: 1px solid #efddda;
+  border-radius: 99px;
+  padding: 0.3rem 0.55rem;
+  background: #fffaf8;
+  color: #655451;
+  font-size: 0.6rem;
+}
+
+.staining-list li span {
+  color: var(--rose);
+  font-size: 0.82rem;
+  line-height: 1;
+}
+
+.aftercare-step--last {
+  border-bottom: 0;
+}
+
+.aftercare-guide__footnote {
+  margin: 0;
+  border-top: 1px solid #f1e4e0;
+  padding: 0.9rem 1rem;
+  background: #fcf4f1;
+  color: var(--muted);
+  font-family: var(--serif);
+  font-size: 0.76rem;
+  font-style: italic;
+  text-align: center;
+}
+
 :focus-visible {
   outline: 2px solid var(--rose-dark);
   outline-offset: 4px;
@@ -1737,6 +2003,21 @@ h2 em {
     gap: 2rem;
   }
 
+  .aftercare {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .aftercare__intro {
+    position: relative;
+    top: auto;
+    max-width: 35rem;
+  }
+
+  .aftercare-guide {
+    width: 100%;
+  }
+
   .hours__intro {
     max-width: 35rem;
   }
@@ -1841,6 +2122,28 @@ h2 em {
     gap: 2.6rem;
     padding-top: 3.8rem;
     padding-bottom: 3.8rem;
+  }
+
+  .aftercare-step {
+    grid-template-columns: 1.8rem 2.5rem minmax(0, 1fr);
+    gap: 0.65rem;
+    margin-right: 0.9rem;
+    margin-left: 0.9rem;
+  }
+
+  .aftercare-step--featured {
+    margin-right: 0.9rem;
+    margin-left: 0.9rem;
+  }
+
+  .aftercare-step__badge {
+    grid-column: 3;
+    justify-self: start;
+    margin-top: 0.1rem;
+  }
+
+  .aftercare-step__content h3 {
+    font-size: 1.03rem;
   }
 
   .contact__details {
