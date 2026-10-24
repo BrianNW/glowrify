@@ -1,17 +1,11 @@
-# Glowrify Teeth Whitening
+# Glowrify
 
-A responsive static website preview for Glowrify in Surrey, BC, Canada.
+Glowrify's full-stack booking and admin application is maintained separately in the private [glowrify-booking repository](https://github.com/BrianNW/glowrify-booking). It uses Next.js, TypeScript, and MySQL. Access to that repository is required to view its source and deployment guide.
 
-The site includes separate `pricing.html`, `hours.html`, `preparation.html`, and `post-op.html` pages for whitening prices, studio hours, pre-appointment guidance, and post-whitening instructions.
+## GitHub Pages
 
-Each page has location-focused search metadata and social sharing previews. `sitemap.xml` lists the public pages, and `robots.txt` points crawlers to the sitemap.
+The GitHub Actions workflow publishes a curated static marketing site from `public/site/`. It includes the training intake PDF but does not publish or run the Next.js server, APIs, database, or admin tools. Booking links on Pages direct visitors to email. Live bookings and administration remain unavailable until the application is deployed to a Node.js-capable host.
 
-The home page's booking buttons open `bookings.html`, a static visual calendar preview. Its sample times are for design testing only; they do not reflect live availability, reserve appointments, or transmit form details.
+Pushes to `main` deploy the static site. View the deployment URL and status in the repository's **Settings → Pages** and **Actions** tabs.
 
-## Preview locally
-
-Open `index.html` or `bookings.html` in a browser. The fonts are loaded from Google Fonts; all site images are stored in `images/`.
-
-## Deploy with GitHub Pages
-
-The GitHub Actions workflow in `.github/workflows/pages.yml` deploys the site whenever changes are pushed to `main`. After the first deployment, the public site is available from the repository's **Settings → Pages** page.
+The GitHub repository is public. Do not commit credentials, `.env` files, database dumps, or other private data.

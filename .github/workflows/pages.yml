@@ -28,10 +28,12 @@ jobs:
         uses: actions/configure-pages@v5
         with:
           enablement: true
+      - name: Build static marketing site
+        run: node scripts/build-github-pages.mjs "$RUNNER_TEMP/glowrify-pages-site"
       - name: Upload site files
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: ${{ runner.temp }}/glowrify-pages-site
       - name: Deploy site
         id: deployment
         uses: actions/deploy-pages@v4
