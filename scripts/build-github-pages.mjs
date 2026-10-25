@@ -23,6 +23,10 @@ for (const file of ["index.html", "pricing.html", "hours.html", "preparation.htm
   await cp(path.join(staticDirectory, file), path.join(outputDirectory, file));
 }
 await cp(path.join(staticDirectory, "images"), path.join(outputDirectory, "images"), { recursive: true });
+await cp(
+  path.join(repositoryDirectory, "images", "logo-transparent1.png"),
+  path.join(outputDirectory, "images", "logo-transparent1.png"),
+);
 await mkdir(path.join(outputDirectory, "documents"), { recursive: true });
 await cp(
   path.join(repositoryDirectory, "public", "documents", "teeth-whitening-training-intake.pdf"),

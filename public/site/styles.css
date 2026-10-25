@@ -78,18 +78,9 @@ img {
   flex-shrink: 0;
 }
 
-.wordmark__name {
-  font-family: var(--serif);
-  font-size: 2rem;
-  font-style: italic;
-  line-height: 1;
-  color: #f078a9;
-  text-shadow: 0 0 2px #fff4f8, 0 0 7px rgba(255, 165, 200, 0.98),
-    0 0 16px rgba(255, 105, 170, 0.8), 0 0 30px rgba(255, 105, 170, 0.58);
-}
-
-.wordmark__dot {
-  color: var(--rose);
+.wordmark__logo {
+  width: 100%;
+  height: auto;
 }
 
 .wordmark__descriptor {
