@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex, nofollow" />
     <meta name="theme-color" content="#fbf5f2" />
-    <title>Booking Calendar Preview | Glowrify</title>
+    <title>Glowrify | Teeth Whitening</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,10 +14,13 @@
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body class="booking-page-disabled">
+    <div class="booking-preview__page-overlay" aria-hidden="true">
+      <span>Coming soon</span>
+    </div>
     <header class="site-header site-header--interior">
       <a class="wordmark" href="index.html#home" aria-label="Glowrify Teeth Whitening home">
-        <span class="wordmark__name">Glowrify<span class="wordmark__dot">.</span></span>
+        <img class="wordmark__logo" src="images/logo-transparent1.png" alt="" />
         <span class="wordmark__descriptor">TEETH WHITENING</span>
       </a>
       <a class="button button--small header-cta" href="index.html">
@@ -34,7 +37,10 @@
         <span class="pricing-hero__spark" aria-hidden="true">✳</span>
       </section>
 
-      <section class="booking-preview section-pad" aria-labelledby="booking-title">
+      <section class="booking-preview section-pad booking-preview--disabled" aria-labelledby="booking-title">
+        <div class="booking-preview__page-overlay" aria-hidden="true">
+          <span>Coming soon</span>
+        </div>
         <div class="booking-preview__panel">
           <div class="booking-preview__heading">
             <p class="eyebrow"><span class="eyebrow__line"></span> A little more glow</p>
@@ -58,7 +64,7 @@
               </select>
             </label>
 
-            <div class="booking-preview__calendar">
+            <div class="booking-preview__calendar booking-preview__calendar--disabled">
               <div class="booking-preview__calendar-top">
                 <div>
                   <span class="booking-preview__overline">YOUR VISIT</span>
@@ -77,7 +83,12 @@
                 <span>Sample times</span>
                 <span class="booking-preview__timezone">Pacific Time</span>
               </div>
+              <div class="booking-preview__calendar-overlay" aria-label="Booking calendar coming soon">
+                <span class="booking-preview__calendar-overlay-badge">Coming soon</span>
+              </div>
             </div>
+
+            <p class="booking-preview__email-note">To book an appointment, email <a href="mailto:glowrify.co@gmail.com">glowrify.co@gmail.com</a></p>
 
             <fieldset class="booking-preview__times">
               <legend>Available start times</legend>
